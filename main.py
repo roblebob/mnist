@@ -1,4 +1,5 @@
-from __future__ import absolute_import, division, print_function
+from __future__ import absolute_import, division, print_function, unicode_literals
+import pathlib, sys, os
 import abc, functools, inspect
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,35 +9,36 @@ import tensorflow_datasets as tfds
 
 assert (tf.executing_eagerly() is True), 'ERROR: tf is NOT executing eagerly'
 
-
-
+#####################################################################
+#####################################################################
 # importing dataset using KERAS #####################################
 
-# importing dataset from tf.keras
 ks = tf.keras.datasets.mnist.load_data()
 # ks_train, ks_test = ks
 # (x_train, y_train), (x_test, y_test) = ks_train, ks_test
 # x_train, x_test = x_train / 255.0, x_test / 255.0
 
 
-
-
+####################################################################
+####################################################################
 # importing dataset using TFDS #####################################
 
-#
-split =  tfds.Split.ALL
-#        [tfds.Split.TRAIN,  tfds.Split.TEST, tfds.Split.VALIDATION]
-
-ds = tfds.load(name="mnist", split=split)
-assert isinstance(ds, tf.data.Dataset)
-
-
-
-dsb = tfds.builder('mnist')
+mnist_builder = tfds.builder("mnist")
+mnist_builder.download_and_prepare()
+mnist_train = mnist_builder.as_dataset(split=tfds.Split.TRAIN)
+assert isinstance(mnist_train, tf.data.Dataset)
 
 
 
 
+
+
+
+# cwd = pathlib.Path.cwd()
+# p = cwd + '\\..\\,,,' + '\\tensorflow_datasets' + '\\mnist\\1.0.0\\'
+# filedir = 'C:\\Users\\roble\\tensorflow_datasets\\mnist\\1.0.0\\'
+# filenames = []
+# dataset = tf.data.TFRecordDataset(filenames)
 
 
 
