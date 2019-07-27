@@ -1,13 +1,23 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
+import abc, absl, functools, inspect
 import pathlib, sys, os
-import abc, functools, inspect
-import matplotlib.pyplot as plt
 import numpy as np
-import absl
 import tensorflow as tf
+from tensorflow import keras
 import tensorflow_datasets as tfds
+import matplotlib.pyplot as plt
 
 assert (tf.executing_eagerly() is True), 'ERROR: tf is NOT executing eagerly'
+
+
+
+
+
+
+
+
+
+
 
 #####################################################################
 #####################################################################
@@ -23,7 +33,7 @@ ks = tf.keras.datasets.mnist.load_data()
 ####################################################################
 # importing dataset using TFDS #####################################
 
-mnist_builder = tfds.builder("mnist")
+mnist_builder = tfds.builder("sources")
 mnist_builder.download_and_prepare()
 mnist_train = mnist_builder.as_dataset(split=tfds.Split.TRAIN)
 assert isinstance(mnist_train, tf.data.Dataset)
@@ -35,8 +45,8 @@ assert isinstance(mnist_train, tf.data.Dataset)
 
 
 # cwd = pathlib.Path.cwd()
-# p = cwd + '\\..\\,,,' + '\\tensorflow_datasets' + '\\mnist\\1.0.0\\'
-# filedir = 'C:\\Users\\roble\\tensorflow_datasets\\mnist\\1.0.0\\'
+# p = cwd + '\\..\\,,,' + '\\tensorflow_datasets' + '\\sources\\1.0.0\\'
+# filedir = 'C:\\Users\\roble\\tensorflow_datasets\\sources\\1.0.0\\'
 # filenames = []
 # dataset = tf.data.TFRecordDataset(filenames)
 
