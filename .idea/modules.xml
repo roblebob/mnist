@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/playground-4_tensorflow.iml" filepath="$PROJECT_DIR$/.idea/playground-4_tensorflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/playground_4_MNIST.iml" filepath="$PROJECT_DIR$/.idea/playground_4_MNIST.iml" />
     </modules>
   </component>
 </project>

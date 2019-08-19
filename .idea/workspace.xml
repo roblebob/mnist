@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e71227c-3ee8-4c7d-88b5-57f5b14260c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Mnist_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnist_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by_PyTorch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by_Tensorflow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/by_keras_CNN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/playground-4_tensorflow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/playground_4_MNIST.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/my_first_model.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/test-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/test-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/test_abc.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test_abc.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/access_colab2local.sh" beforeDir="false" afterPath="$PROJECT_DIR$/access_colab2local.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mnist_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnist_.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jupyter Notebook" />
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -56,7 +59,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/by_keras_CNN.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +68,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -94,9 +97,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mnist_test">
+  <component name="RunManager" selected="Python.by_keras_CNN">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="playground-4_tensorflow" />
+      <module name="playground_4_MNIST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -117,30 +120,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
-      <module name="playground-4_tensorflow" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\roble\Anaconda3\envs\ml-gpu\pythonw.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mnist" type="PythonConfigurationType" factoryName="Python">
-      <module name="playground-4_tensorflow" />
+    <configuration name="by_PyTorch" type="PythonConfigurationType" factoryName="Python">
+      <module name="playground_4_MNIST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -152,7 +133,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mnist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/by_PyTorch.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,20 +142,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mnist_test" type="PythonConfigurationType" factoryName="Python">
-      <module name="playground-4_tensorflow" />
+    <configuration name="by_Tensorflow" type="PythonConfigurationType" factoryName="Python">
+      <module name="playground_4_MNIST" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/by_Tensorflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="by_keras_CNN" type="PythonConfigurationType" factoryName="Python">
+      <module name="playground_4_MNIST" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="C:\Users\roble\Anaconda3\envs\ml-gpu\pythonw.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\roble\playground-4_tensorflow\Mnist_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/by_keras_CNN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -184,9 +184,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.mnist" />
-      <item itemvalue="Python.mnist_test" />
+      <item itemvalue="Python.by_Tensorflow" />
+      <item itemvalue="Python.by_PyTorch" />
+      <item itemvalue="Python.by_keras_CNN" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -222,7 +222,23 @@
       <workItem from="1564171494042" duration="1982000" />
       <workItem from="1564228012509" duration="2052000" />
       <workItem from="1564266056548" duration="423000" />
-      <workItem from="1564266488379" duration="298000" />
+      <workItem from="1564266488379" duration="23346000" />
+      <workItem from="1564373180474" duration="3313000" />
+      <workItem from="1564408909598" duration="85000" />
+      <workItem from="1564409413225" duration="3963000" />
+      <workItem from="1564484645235" duration="995000" />
+      <workItem from="1564486766662" duration="154000" />
+      <workItem from="1564533344676" duration="311000" />
+      <workItem from="1564536493666" duration="226000" />
+      <workItem from="1564537480229" duration="304000" />
+      <workItem from="1564537849628" duration="2016000" />
+      <workItem from="1564585896328" duration="10867000" />
+      <workItem from="1565803235556" duration="986000" />
+      <workItem from="1565834616522" duration="1213000" />
+      <workItem from="1565847048448" duration="11047000" />
+      <workItem from="1565903689897" duration="4173000" />
+      <workItem from="1565955894100" duration="739000" />
+      <workItem from="1566213651382" duration="7791000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1563478161687</created>
@@ -245,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563580659269</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="put all code put to main/(root) project directory">
+      <created>1564266885795</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564266885795</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +305,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="first commit ++" />
     <MESSAGE value="process progress is now append uppon list layers -&gt; accessible history" />
-    <option name="LAST_COMMIT_MESSAGE" value="process progress is now append uppon list layers -&gt; accessible history" />
+    <MESSAGE value="put all code put to main/(root) project directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="put all code put to main/(root) project directory" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/playground_4_tensorflow$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1563673344965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
