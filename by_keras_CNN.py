@@ -53,7 +53,6 @@ j = 2
 #
 model = keras.Sequential()
 model.add(keras.layers.InputLayer(input_shape=input_shape, dtype=tf.float32))
-#
 # feature extraction ---------------------------------------------------------------------------------------------------
 if j >= 0:
     model.add(keras.layers.Conv2D(filters=24, kernel_size=(5, 5), strides=(1, 1), padding='same', activation='relu'))
@@ -64,14 +63,15 @@ if j >= 1:
 if j >= 2:
     model.add(keras.layers.Conv2D(filters=64, kernel_size=(5, 5), strides=(1, 1),  padding='same', activation='relu'))
     model.add(keras.layers.MaxPool2D(padding='same'))
-#
 # classification -------------------------------------------------------------------------------------------------------
 model.add(keras.layers.Flatten())
 model.add(keras.layers.Dense(256, activation='relu'))
 model.add(keras.layers.Dense(10, activation='softmax'))
 #
 #
-model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
+model.compile(optimizer=keras.optimizers.Nadam(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=None, schedule_decay=0.004),
+              loss="categorical_crossentropy",
+              metrics=["accuracy"])
 
 
 
@@ -104,19 +104,24 @@ pred = np.argmax(model.predict(x=X_test), axis=1)
 idx_where_fault = np.argwhere(y_test != pred)
 
 
-# visual test
+# visual test: plotting all wrongs
 import matplotlib.pyplot as plt
-fig = plt.figure()
-for i in range(9):
-  plt.subplot(3,3,i+1)
-  plt.tight_layout()
-  idx = idx_where_fault[i]
-  imag = X_test[idx] * 255
-  imag.astype(int)
-  imag = imag.squeeze()
-  plt.imshow(imag, cmap='gray', interpolation='none')
-  plt.title("{}:  {} , {}".format(idx, y_test[idx], pred[idx]))
-  plt.xticks([])
-  plt.yticks([])
-plt.show()
+while len(idx_where_fault) > 0:
 
+    fig = plt.figure()
+    for i in range(9):
+        plt.subplot(3,3,i+1)
+        plt.tight_layout()
+        if len(idx_where_fault) > 0:
+            idx = idx_where_fault[0]
+            idx_where_fault = np.delete(idx_where_fault, 0, 0)
+            imag = X_test[idx] * 255
+            imag.astype(int)
+            imag = imag.squeeze()
+            plt.imshow(imag, cmap='gray', interpolation='none')
+            plt.title("#{}: true={}, pred={}".format(idx, y_test[idx], pred[idx]), fontsize='xx-small')
+            plt.xticks([])
+            plt.yticks([])
+        else:
+            break
+    plt.show()
