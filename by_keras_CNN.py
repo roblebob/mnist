@@ -51,22 +51,23 @@ j = 2
 ########################################################################################################################
 # Model
 #
-model = keras.Sequential()
-model.add(keras.layers.InputLayer(input_shape=input_shape, dtype=tf.float32))
+_input = keras.layers.Input(shape=input_shape, dtype=tf.float32)
+#
 # feature extraction ---------------------------------------------------------------------------------------------------
-if j >= 0:
-    model.add(keras.layers.Conv2D(filters=24, kernel_size=(5, 5), strides=(1, 1), padding='same', activation='relu'))
-    model.add(keras.layers.MaxPool2D())
-if j >= 1:
-    model.add(keras.layers.Conv2D(filters=48, kernel_size=(5, 5), strides=(1, 1),  padding='same', activation='relu'))
-    model.add(keras.layers.MaxPool2D())
-if j >= 2:
-    model.add(keras.layers.Conv2D(filters=64, kernel_size=(5, 5), strides=(1, 1),  padding='same', activation='relu'))
-    model.add(keras.layers.MaxPool2D(padding='same'))
+
+_ = keras.layers.Conv2D(filters=24, kernel_size=(5, 5), strides=(1, 1), padding='same', activation='relu')(_input)
+_ = keras.layers.MaxPool2D()(_)
+_ = keras.layers.Conv2D(filters=48, kernel_size=(5, 5), strides=(1, 1),  padding='same', activation='relu')(_)
+_ = keras.layers.MaxPool2D()(_)
+_ = keras.layers.Conv2D(filters=64, kernel_size=(5, 5), strides=(1, 1),  padding='same', activation='relu')(_)
+_ = keras.layers.MaxPool2D(padding='same')(_)
 # classification -------------------------------------------------------------------------------------------------------
-model.add(keras.layers.Flatten())
-model.add(keras.layers.Dense(256, activation='relu'))
-model.add(keras.layers.Dense(10, activation='softmax'))
+_ = keras.layers.Flatten()(_)
+_ = keras.layers.Dense(256, activation='relu')(_)
+_ = keras.layers.Dense(10, activation='softmax')(_)
+#
+#
+model = keras.Model(inputs=_input, outputs=_)
 #
 #
 model.compile(optimizer=keras.optimizers.Nadam(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=None, schedule_decay=0.004),

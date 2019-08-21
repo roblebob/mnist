@@ -37,11 +37,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>tensorflow_datasets</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -231,7 +226,8 @@
       <workItem from="1565955894100" duration="739000" />
       <workItem from="1566213651382" duration="12767000" />
       <workItem from="1566238726647" duration="17255000" />
-      <workItem from="1566282724357" duration="7512000" />
+      <workItem from="1566282724357" duration="7679000" />
+      <workItem from="1566388342305" duration="4063000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1563478161687</created>
@@ -282,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566260841274</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="preparing new start">
+      <created>1566304130776</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566304130776</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
